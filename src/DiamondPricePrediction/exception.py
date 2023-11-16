@@ -1,7 +1,7 @@
 import sys
 
 
-class customerexception(Exception):
+class CustomException(Exception):
     def __init__(self,error_message,error_details:sys):
         self.error_message=error_message
         _,_,exc_tb=error_details.exc_info()
@@ -15,11 +15,10 @@ class customerexception(Exception):
     
     
     
-    
 if __name__ == "__main__":        
     try:
     
         a=1/0
     
     except Exception as e:
-        raise customerexception(e,sys)
+        raise CustomException(e,sys)
