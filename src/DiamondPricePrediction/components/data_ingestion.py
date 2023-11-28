@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
 
-from src.exception import CustomException
-from src.logger import logging
+from src.DiamondPricePrediction import logging
+from src.DiamondPricePrediction import customexception
+
 
 import os
 import sys
