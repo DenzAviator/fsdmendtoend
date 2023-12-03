@@ -21,7 +21,6 @@ class ModelEvaluation:
         r2 = r2_score(actual, pred)# here is r3 value
         return rmse, mae, r2
     
-    
     def initiate_model_evaluation(self,train_array,test_array):
         try:
             X_test,y_test=(test_array[:,:-1], test_array[:,-1])
