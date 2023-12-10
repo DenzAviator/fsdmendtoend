@@ -1,4 +1,3 @@
-
 import os
 import sys
 import pandas as pd
@@ -19,8 +18,6 @@ from src.DiamondPricePrediction.utils import save_object
 class DataTransformationConfig:
     preprocessor_obj_file_path=os.path.join('artifacts','preprocessor.pkl')
 
-class DataTransformationConfig:
-    preprocessor_obj_file_path
 
 class DataTransformation:
     def __init__(self):
