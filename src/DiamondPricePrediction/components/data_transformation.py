@@ -76,7 +76,7 @@ class DataTransformation:
         except Exception as e:
             logging.info("Exception occured in the initiate_datatransformation")
 
-            raise customexception(e,sys)
+            raise CustomException(e,sys)
             
     
     def initialize_data_transformation(self,train_path,test_path):
