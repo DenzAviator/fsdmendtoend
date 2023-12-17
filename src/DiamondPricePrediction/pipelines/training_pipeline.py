@@ -9,7 +9,7 @@ from src.DiamondPricePrediction.components.model_evaluation import ModelEvaluati
 import os
 import sys
 from src.DiamondPricePrediction.logger import logging
-from src.DiamondPricePrediction.exception import customexception
+from src.DiamondPricePrediction.exception import CustomException
 import pandas as pd
 
 
