@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 from src.DiamondPricePrediction.logger import logging
-from src.DiamondPricePrediction.exception import customexception
+from src.DiamondPricePrediction.exception import CustomException
 
 
 import os
