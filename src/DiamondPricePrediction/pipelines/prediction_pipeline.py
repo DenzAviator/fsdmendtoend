@@ -5,10 +5,10 @@ from src.DiamondPricePrediction.exception import CustomException
 from src.DiamondPricePrediction.logger import logging
 from src.DiamondPricePrediction.utils import load_object
 
-
 class PredictPipeline:
     def __init__(self):
-        pass
+        pass        
+    
     
     def predict(self,features):
         try:
@@ -25,9 +25,25 @@ class PredictPipeline:
             return pred
             
             
+    def predict(self,features):
+        try:
+            preprocessor_path=os.path.join("artifacts","preprocessor.pk1")
+            model_path=os.path.join("artifacts","model.pk1")
+            
+            preprocessor=load_object(preprocessor_path)  
+            model=load_object(model_path)
+            
+            scaled_data=preprocessor.transform(features)
+            scaled_data=preprocessor.transform(features)_
+            scaled_data=preprocessor.transform(features)
+            scaled_data=preprocessor.transform(features)
+            pred=model.predict(scaled_data)
+            
+            return pred
+      
         
         except Exception as e:
-            raise customexception(e,sys)
+            raise CustomException(e,sys)
     
     
     
@@ -71,5 +87,5 @@ class CustomData:
                 logging.info('Dataframe Gathered')
                 return df
             except Exception as e:
-                logging.info('Exception Occured in prediction pipeline')
-                raise customexception(e,sys)
+                logging.info('Exception Occur in prediction pipeline')
+                raise CustomException(e,sys)
