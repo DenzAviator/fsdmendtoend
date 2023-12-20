@@ -3,11 +3,11 @@ import pandas as pd
 import numpy as np
 import os
 import sys
-from src.DimondPricePrediction.logger import logging
-from src.DimondPricePrediction.exception import CustomException
+from src.DiamondPricePrediction.logger import logging
+from src.DiamondPricePrediction.exception import CustomException
 from dataclasses import dataclass
-from src.DimondPricePrediction.utils.utils import save_object
-from src.DimondPricePrediction.utils.utils import evaluate_model
+from src.DiamondPricePrediction.utils import save_object
+from src.DiamondPricePrediction.utils import evaluate_model
 
 from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
 
