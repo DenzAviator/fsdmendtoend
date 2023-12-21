@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import os
@@ -11,6 +10,15 @@ from src.DiamondPricePrediction.utils import evaluate_model
 
 from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
 
+@dataclass
+class ModelTrainerConfig:
+    trained_model_file_path=os.path.join("artifacts","model.pkl")
+    
+class modelTrainer:
+    def __init__(self):
+        self.model_trainer_config=ModelTrainerConfig()
+
+
 
 @dataclass 
 class ModelTrainerConfig:
@@ -21,7 +29,7 @@ class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
     
-    def initate_model_training(self,train_array,test_array):
+    def initiate_model_training(self,train_array,test_array):
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
             X_train, y_train, X_test, y_test = (
@@ -63,7 +71,7 @@ class ModelTrainer:
           
 
         except Exception as e:
-            logging.info('Exception occured at Model Training')
+            logging.info('Exception occur at Model Training')
             raise CustomException(e,sys)
 
         
