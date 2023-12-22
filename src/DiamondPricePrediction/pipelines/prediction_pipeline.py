@@ -23,23 +23,6 @@ class PredictPipeline:
             pred=model.predict(scaled_data)
             
             return pred
-            
-            
-    def predict(self,features):
-        try:
-            preprocessor_path=os.path.join("artifacts","preprocessor.pk1")
-            model_path=os.path.join("artifacts","model.pk1")
-            
-            preprocessor=load_object(preprocessor_path)  
-            model=load_object(model_path)
-            
-            scaled_data=preprocessor.transform(features)
-            scaled_data=preprocessor.transform(features)_
-            scaled_data=preprocessor.transform(features)
-            scaled_data=preprocessor.transform(features)
-            pred=model.predict(scaled_data)
-            
-            return pred
       
         
         except Exception as e:
@@ -69,7 +52,9 @@ class CustomData:
         self.color = color
         self.clarity = clarity
             
-                
+    
+            
+    
     def get_data_as_dataframe(self):
             try:
                 custom_data_input_dict = {
