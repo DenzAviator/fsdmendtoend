@@ -14,7 +14,17 @@ class ModelEvaluation:
     def __init__(self):
         pass
     
+
+class ModelEvaluation:
+    def __init__(self):
+        pass
     
+    def eval_metrics(self,actual,pred):
+        rmse = np.square(mean_squared_error(self,actual,pred))
+        mae = mean_absolute_error(actual,pred)
+        r2 = r2_score(actual,pred)
+        return rmse,mae,r2
+
     def eval_metrics(self,actual,pred):
         rmse = np.sqrt(mean_squared_error(actual, pred))# here is RMSE
         mae = mean_absolute_error(actual, pred)# here is MAE
