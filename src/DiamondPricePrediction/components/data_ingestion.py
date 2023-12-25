@@ -12,6 +12,11 @@ from dataclasses import dataclass
 from pathlib import Path
 
 class DataIngestionConfig:
+    raw_data_path=os.path.join("artifacts","raw.csv")
+    test_data_path=os.path.join("artifacts","test.csv")
+    train_data_path=os.path.join("artifacts","train.csv")
+
+class DataIngestionConfig:
     raw_data_path:str=os.path.join("artifacts","raw.csv")
     train_data_path:str=os.path.join("artifacts","train.csv")
     test_data_path:str=os.path.join("artifacts","test.csv")
