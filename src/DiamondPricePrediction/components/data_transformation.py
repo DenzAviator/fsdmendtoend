@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 from dataclasses import dataclass
-from src.DiamondPricePrediction.exception import customexception
+from src.DiamondPricePrediction.exception import CustomException
 from src.DiamondPricePrediction.logger import logging
 
 from sklearn.compose import ColumnTransformer
@@ -119,8 +119,8 @@ class DataTransformation:
             )
             
         except Exception as e:
-            logging.info("Exception occured in the initiate_datatransformation")
+            logging.info("Exception occur in the initiate_datatransformation")
 
-            raise customexception(e,sys)
+            raise CustomException(e,sys)
             
     
