@@ -48,7 +48,7 @@ class ModelTrainer:
             
             model_report:dict=evaluate_model(X_train,y_train,X_test,y_test,models)
             print(model_report)
-            print('\n====================================================================================\n')
+            print('\n===============================================================================\n')
             logging.info(f'Model Report : {model_report}')
 
             # To get best model score from dictionary 
