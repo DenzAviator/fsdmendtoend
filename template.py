@@ -10,6 +10,7 @@ list_of_files=[
     f"src/{package_name}/components/data_ingestion.py",
     f"src/{package_name}/components/data_transformation.py",
     f"src/{package_name}/components/model_trainer.py",
+    f"src/{package_name}/components/model_evaluation.py",
     f"src/{package_name}/pipelines/__init__.py",
     f"src/{package_name}/pipelines/training_pipeline.py",
     f"src/{package_name}/pipelines/prediction_pipeline.py",
@@ -23,12 +24,11 @@ list_of_files=[
     "init_setup.sh",
 ]
 
-
 # here will create a directory
 
 for filepath in list_of_files:
     filepath=Path(filepath)
-    filedir,filename=os.path.split(filepath)
+    filedir, filename=os.path.split(filepath)
     
     """ how exist_ok works:if "directory" already exists, 
     os.makedirs() will not raise an error, and it will do nothing. 
