@@ -13,6 +13,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder,StandardScaler
 
+
 from src.DiamondPricePrediction.utils import save_object
 
 @dataclass

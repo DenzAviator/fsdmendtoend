@@ -58,6 +58,7 @@ class ModelTrainer:
                 list(model_report.values()).index(best_model_score)
             ]
             
+            
             best_model = models[best_model_name]
 
             print(f'Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}')
