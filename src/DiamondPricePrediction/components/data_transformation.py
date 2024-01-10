@@ -13,7 +13,6 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder,StandardScaler
 
-
 from src.DiamondPricePrediction.utils import save_object
 
 @dataclass
@@ -25,7 +24,6 @@ class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
 
-    
     def get_data_transformation(self):
         
         try:
