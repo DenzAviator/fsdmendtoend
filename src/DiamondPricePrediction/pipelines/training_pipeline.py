@@ -13,6 +13,7 @@ from src.DiamondPricePrediction.exception import CustomException
 import pandas as pd
 
 
+
 obj=DataIngestion()
 
 train_data_path,test_data_path=obj.initiate_data_ingestion()
