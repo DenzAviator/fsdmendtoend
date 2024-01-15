@@ -4,7 +4,6 @@ import pandas as pdimport p
 from src.DiamondPricePrediction.logger import logging
 from src.DiamondPricePrediction.exception import CustomException
 
-
 import os
 import sys
 from sklearn.model_selection import train_test_split
@@ -15,7 +14,6 @@ class DataIngestionConfig:
     raw_data_path:str=os.path.join("artifacts","raw.csv")
     train_data_path:str=os.path.join("artifacts","train.csv")
     test_data_path:str=os.path.join("artifacts","test.csv")
-
 
 class DataIngestion:
     def __init__(self):
@@ -33,7 +31,6 @@ class DataIngestion:
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path),exist_ok=True))
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info("I have saved the raw dataset in artifact folder")
-            
             
             logging.info("Here I have performed train test split")
             

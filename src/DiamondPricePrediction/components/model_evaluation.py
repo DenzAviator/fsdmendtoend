@@ -9,7 +9,6 @@ import numpy as np
 import pickle
 from src.DiamondPricePrediction.utils import load_object
 
-
 class ModelEvaluation:
     def __init__(self):
         pass
@@ -17,6 +16,7 @@ class ModelEvaluation:
 class ModelEvaluation:
     def __init__(self):
         pass
+    
     
     def eval_metrics(self,actual,pred):
         rmse = np.square(mean_squared_error(self,actual,pred))
