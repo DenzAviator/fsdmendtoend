@@ -28,6 +28,7 @@ class DataIngestion:
             logging.info("I have read the dataset as a df")
             
             
+            
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path),exist_ok=True))
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info("I have saved the raw dataset in artifact folder")

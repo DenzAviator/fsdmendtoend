@@ -20,6 +20,7 @@ class DataTransformationConfig:
     preprocessor_obj_file_path=os.path.join('artifacts','preprocessor.pkl')
 
 
+
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
