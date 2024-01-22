@@ -2,7 +2,6 @@ import os
 import sys
 import pandas as pd
 
-
 from src.DiamondPricePrediction.exception import CustomException
 from src.DiamondPricePrediction.logger import logging
 from src.DiamondPricePrediction.utils import load_object
@@ -18,6 +17,7 @@ class PredictPipeline:
             
             preprocessor=load_object(preprocessor_path)
             model=load_object(model_path)
+            
             
             scaled_data=preprocessor.transform(features)
             
