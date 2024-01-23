@@ -39,7 +39,6 @@ class DataIngestion:
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
             
-            
             logging.info("Data Ingestion part completed")
             
         except Exception as e:
