@@ -70,6 +70,8 @@ class ModelTrainer:
                  obj=best_model
             )
     
+    
+    
         except Exception as e:
             logging.info('Exception occur at Model Training')
             raise CustomException(e,sys)
