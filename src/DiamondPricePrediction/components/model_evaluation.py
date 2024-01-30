@@ -17,6 +17,7 @@ class ModelEvaluation:
     def __init__(self):
         pass
     
+    
     def eval_metrics(self,actual,pred):
         rmse = np.square(mean_squared_error(self,actual,pred))
         mae = mean_absolute_error(actual,pred)
@@ -68,9 +69,6 @@ class ModelEvaluation:
                     mlflow.sklearn.log_model(model, "model")
 
 
-                
-
-            
         except Exception as e:
             raise e
 
