@@ -6,6 +6,7 @@ from src.DiamondPricePrediction.exception import CustomException
 from src.DiamondPricePrediction.logger import logging
 from src.DiamondPricePrediction.utils import load_object
 
+
 class PredictPipeline:
     def __init__(self):
         pass        
