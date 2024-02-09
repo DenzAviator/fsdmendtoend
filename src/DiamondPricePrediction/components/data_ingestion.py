@@ -33,6 +33,7 @@ class DataIngestion:
             
             logging.info("Here I have performed train test split")
             
+            
             train_data,test_data=train_test_split(data,test_size=0.25)
             logging.info("train test split completed")
                      

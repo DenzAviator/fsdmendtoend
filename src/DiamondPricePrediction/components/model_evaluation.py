@@ -52,6 +52,7 @@ class ModelEvaluation:
 
                 (rmse, mae, r2) = self.eval_metrics(y_test, predicted_qualities)
 
+
                 mlflow.log_metric("rmse", rmse)
                 mlflow.log_metric("r2", r2)
                 mlflow.log_metric("mae", mae)

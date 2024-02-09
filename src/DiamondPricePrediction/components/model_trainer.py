@@ -40,6 +40,8 @@ class ModelTrainer:
             )
 
 
+
+
             models={
             'LinearRegression':LinearRegression(),
             'Lasso':Lasso(),
