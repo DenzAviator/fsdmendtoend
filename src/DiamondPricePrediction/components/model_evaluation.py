@@ -41,17 +41,16 @@ class ModelEvaluation:
             
             mlflow.set_registry_uri("https://dagshub.com/sunny.savita/fsdsmendtoend.mlflow")
             
+            
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
             
             print(tracking_url_type_store)
-            
             
             with mlflow.start_run():
 
                 predicted_qualities = model.predict(X_test)
 
                 (rmse, mae, r2) = self.eval_metrics(y_test, predicted_qualities)
-
 
                 mlflow.log_metric("rmse", rmse)
                 mlflow.log_metric("r2", r2)
