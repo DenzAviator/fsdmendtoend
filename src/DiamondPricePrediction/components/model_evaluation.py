@@ -18,6 +18,7 @@ class ModelEvaluation:
         pass
     
     
+    
     def eval_metrics(self,actual,pred):
         rmse = np.square(mean_squared_error(self,actual,pred))
         mae = mean_absolute_error(actual,pred)
