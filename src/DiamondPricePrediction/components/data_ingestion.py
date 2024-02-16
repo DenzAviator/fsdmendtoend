@@ -27,11 +27,13 @@ class DataIngestion:
             data=pd.read_csv(Path(os.path.join("notebooks/data","diamond.csv.CSV")))
             logging.info("I have read the dataset as a df")
              
+             
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path),exist_ok=True))
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info("I have saved the raw dataset in artifact folder")
             
             logging.info("Here I have performed train test split")
+            
             
             train_data,test_data=train_test_split(data,test_size=0.25)
             logging.info("train test split completed")

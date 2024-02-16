@@ -39,6 +39,7 @@ class ModelTrainer:
                 test_array[:,-1]
             )
             
+            
             models={
             'LinearRegression':LinearRegression(),
             'Lasso':Lasso(),
