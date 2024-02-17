@@ -9,6 +9,8 @@ from src.DiamondPricePrediction.utils import load_object
 class PredictPipeline:
     def __init__(self):
         pass        
+    
+    
     def predict(self,features):
         try:
             preprocessor_path=os.path.join("artifacts","preprocessor.pkl")
@@ -18,7 +20,6 @@ class PredictPipeline:
             model=load_object(model_path)
             
             scaled_data=preprocessor.transform(features)
-            
             
             pred=model.predict(scaled_data)
             

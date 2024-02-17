@@ -68,7 +68,6 @@ class ModelEvaluation:
                     mlflow.sklearn.log_model(model, "model", registered_model_name="ml_model")
                 else:
                     mlflow.sklearn.log_model(model, "model")
-         
                     
         except Exception as e:
             raise e
