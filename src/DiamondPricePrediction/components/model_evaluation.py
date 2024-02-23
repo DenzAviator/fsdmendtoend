@@ -31,12 +31,15 @@ class ModelEvaluation:
         r2 = r2_score(actual, pred)# here is r3 value
         return rmse, mae, r2
     
+    
     def initiate_model_evaluation(self,train_array,test_array):
         try:
             X_test,y_test=(test_array[:,:-1],test_array[:,-1])
 
+
             model_path=os.path.join("artifacts","model.pkl")
             model=load_object(model_path)
+            
             
             mlflow.set_registry_uri("https://dagshub.com/sunny.savita/fsdsmendtoend.mlflow")  
             

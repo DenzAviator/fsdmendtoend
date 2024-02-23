@@ -8,7 +8,8 @@ from src.DiamondPricePrediction.utils import load_object
 
 class PredictPipeline:
     def __init__(self):
-        pass        
+        pass       
+     
     
     def predict(self,features):
         try:
