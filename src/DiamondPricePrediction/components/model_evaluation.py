@@ -37,6 +37,7 @@ class ModelEvaluation:
             X_test,y_test=(test_array[:,:-1],test_array[:,-1])
 
 
+
             model_path=os.path.join("artifacts","model.pkl")
             model=load_object(model_path)
             
