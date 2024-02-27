@@ -26,6 +26,7 @@ class ModelTrainerConfig:
     
     
 class ModelTrainer:
+    
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
     
@@ -39,6 +40,7 @@ class ModelTrainer:
                 test_array[:,:-1],
                 test_array[:,-1]
             )
+            
             
             models={
             'LinearRegression':LinearRegression(),

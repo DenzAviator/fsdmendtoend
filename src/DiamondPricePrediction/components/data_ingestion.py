@@ -31,7 +31,9 @@ class DataIngestion:
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info("I have saved the raw dataset in artifact folder")
             
+            
             logging.info("Here I have performed train test split")
+            
             
             train_data,test_data=train_test_split(data,test_size=0.25)
             logging.info("train test split completed")
@@ -39,6 +41,7 @@ class DataIngestion:
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
             logging.info("Data Ingestion part completed")
+         
          
         except Exception as e:
             logging.info("exception during occur data ingestion stage")
