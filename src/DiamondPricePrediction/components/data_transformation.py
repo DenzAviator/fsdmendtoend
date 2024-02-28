@@ -22,13 +22,16 @@ class DataTransformationConfig:
 class DataTransformation:
     
     
+    
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
 
     def get_data_transformation(self):
         
+        
         try:
             logging.info('Data Transformation initiated')
+            
             
             # Define which columns should be ordinal-encoded and which should be scaled
             categorical_cols = ['cut', 'color','clarity']
