@@ -21,8 +21,6 @@ class DataTransformationConfig:
 
 class DataTransformation:
     
-    
-    
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
 
@@ -31,6 +29,7 @@ class DataTransformation:
         
         try:
             logging.info('Data Transformation initiated')
+            
             
             
             # Define which columns should be ordinal-encoded and which should be scaled
