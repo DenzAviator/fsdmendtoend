@@ -27,9 +27,11 @@ class DataIngestion:
             data=pd.read_csv(Path(os.path.join("notebooks/data","diamond.csv.CSV")))
             logging.info("I have read the dataset as a df")
              
+             
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path),exist_ok=True))
             data.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info("I have saved the raw dataset in artifact folder")
+            
             
             logging.info("Here I have performed train test split")
             
@@ -39,6 +41,7 @@ class DataIngestion:
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
             logging.info("Data Ingestion part completed")
+         
          
         except Exception as e:
             logging.info("exception during occur data ingestion stage")
