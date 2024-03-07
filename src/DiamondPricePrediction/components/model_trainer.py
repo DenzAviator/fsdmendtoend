@@ -29,12 +29,16 @@ class ModelTrainerConfig:
 class ModelTrainer:
     
     
+    
+    
     def __init__(self):
         
         self.model_trainer_config = ModelTrainerConfig()
     
     
     def initiate_model_training(self,train_array,test_array):
+        
+        
         
         
         try:

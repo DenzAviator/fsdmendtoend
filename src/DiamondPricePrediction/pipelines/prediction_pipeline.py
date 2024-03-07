@@ -7,6 +7,8 @@ from src.DiamondPricePrediction.logger import logging
 from src.DiamondPricePrediction.utils import load_object
 class PredictPipeline:
     
+    
+    
     def __init__(self):
         pass       
      
@@ -14,6 +16,7 @@ class PredictPipeline:
         try:
             preprocessor_path=os.path.join("artifacts","preprocessor.pkl")
             model_path=os.path.join("artifacts","model.pkl")
+            
             
             preprocessor=load_object(preprocessor_path)
             model=load_object(model_path)
